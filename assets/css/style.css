@@ -21,6 +21,10 @@ em {
     font-style: italic;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .--grid {
     display: -ms-grid;
     display: grid;
