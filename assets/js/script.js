@@ -29,13 +29,28 @@ const revealOnScroll = () => {
 };
 
 const getRandomUrl = () => {
-    const buttonUrl = document.querySelector(".random-button");
-    const items = [];
-    const item = items[Math.floor(Math.random()*items.length)];
-}
+    const surveyButton = document.getElementById("survey-button");
+    const anchorTag = surveyButton.querySelector("a");
+    // const href = anchorTag.href;
+    const urlsArray = [
+        "https://forms.gle/CA8SdSow6jihfcRXA", 
+        "https://forms.gle/K9qtJidEG7s3t6WB8",
+        "https://forms.gle/3uTqfwW3CfwH7s8X8",
+        "https://forms.gle/K5v4EUw994KrmuB87",
+        "https://forms.gle/1RrutBxgspw2QtiV9",
+        "https://forms.gle/teujgRT9SMK9Bcww7",
+        "https://forms.gle/HqivPu7tgUGWyjCJ6",
+        "https://forms.gle/N9hKTkn1pSuA14YdA",
+        "https://forms.gle/g4dP5WMm6XseAcG56"
+    ];
+    const href = urlsArray[Math.floor(Math.random()*urlsArray.length)];
+    anchorTag.setAttribute("href", href);
+    return false;
+};
 
 window.addEventListener("load", () => {
     documentHeight();
+    getRandomUrl();
     revealOnLoad();
 });
 
