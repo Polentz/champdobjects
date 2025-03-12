@@ -6,9 +6,16 @@ html {
 
 body {
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-family: "Roc Grotesk";
     font-weight: 400;
     font-style: normal;
@@ -89,6 +96,8 @@ a.inner-link:hover {
     width: 100%;
     padding: var(--gap) var(--left-right);
     opacity: 0;
+    -webkit-transition: opacity .5s .25s ease;
+    -o-transition: opacity .5s .25s ease;
     transition: opacity .5s .25s ease;
 }
 
@@ -174,26 +183,49 @@ a.inner-link:hover {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: var(--top);
     opacity: 0;
-    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
+    transition: opacity .5s ease, -webkit-transform .5s ease;
+    -o-transition: opacity .5s ease, transform .5s ease;
     transition: opacity .5s ease, transform .5s ease;
+    transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
 }
 
 .drawing-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     opacity: 0;
-    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transition: opacity .5s ease, -webkit-transform .5s ease;
+    transition: opacity .5s ease, -webkit-transform .5s ease;
+    -o-transition: opacity .5s ease, transform .5s ease;
     transition: opacity .5s ease, transform .5s ease;
+    transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
 }
 
 .text-container.--appear,
 .drawing-container.--appear {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 }
 
 .button {
@@ -204,6 +236,8 @@ a.inner-link:hover {
     padding: 0.75rem 2rem;
     color: var(--color-white);
     background: var(--color-blue);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     border-radius: 40px;
 }
@@ -226,14 +260,19 @@ a.inner-link:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: var(--gap);
 }
 
@@ -276,9 +315,16 @@ a.inner-link:hover {
     }
 
     .--grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 1rem;
     }
 }

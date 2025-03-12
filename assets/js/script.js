@@ -1,6 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
-
 const documentHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
@@ -31,7 +28,6 @@ const revealOnScroll = () => {
 const getRandomUrl = () => {
     const surveyButton = document.getElementById("survey-button");
     const anchorTag = surveyButton.querySelector("a");
-    // const href = anchorTag.href;
     const urlsArray = [
         "https://forms.gle/CA8SdSow6jihfcRXA", 
         "https://forms.gle/K9qtJidEG7s3t6WB8",
