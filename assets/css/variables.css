@@ -2,10 +2,12 @@
     --doc-height: 100%;
     --color-black: #000000;
     --color-white: #ffffff;
-    --color-blue: #db7373;
-    --top: 2rem;
-    --left-right: calc(8vw + 8rem);
+    --color-blue: #00a850;
+    /* --color-blue: #242979; */
+    --top: 4rem;
+    --left-right: 4rem;
     --header-text-size: calc(3vw + 2rem);
     --main-text-size: calc(1vw + 1rem);
-    --text-size: 1.2rem;
+    --text-size: 1.25rem;
+    --gap: 2rem;
 }

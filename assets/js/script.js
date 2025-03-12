@@ -6,81 +6,15 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
 
-const handleInternalLinks = () => {
-    const anchorTags = document.querySelectorAll(".js-href");
-    anchorTags.forEach(link => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const href = link.getAttribute("href");
-            document.querySelector(href).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-};
-
-const observeFooter = () => {
-    const targets = document.querySelectorAll(".footer-item");
-    const marquee = document.querySelector(".marquee");
-    const headline = document.querySelector("#regalo .text-headline");
-    const options = {
-        threshold: 0.5,
-    };
-    const handleIntersection = (entries) => {
-        entries.map((entry) => {
-            if (entry.isIntersecting) {
-                marquee.style.opacity = "0";
-                headline.style.opacity = "0";
-            } else {
-                marquee.style.opacity = "1";
-                headline.style.opacity = "1";
-            };
-        });
-    };
-    const observer = new IntersectionObserver(handleIntersection, options);
-    targets.forEach(target => {
-        observer.observe(target);
-    });
-};
-
-const observeSections = () => {
-    const sections = document.querySelectorAll(".section, .footer");
-    const navItems = document.querySelectorAll(".nav-item.js-href");
-    const options = {
-        threshold: 0.25,
-    };
-    const handleIntersection = (entries) => {
-        entries.map((entry) => {
-            if (entry.isIntersecting && window.scrollY > 10) {
-                navItems.forEach(item => {
-                    const itemId = item.dataset.id;
-                    if (itemId === entry.target.id) {
-                        [...navItems].filter(i => i !== item).forEach(i => i.classList.remove("--current"));
-                        item.classList.add("--current");
-                    };
-                });
-            } else if (window.scrollY < 10) {
-                [...navItems].forEach(i => i.classList.remove("--current"));
-                document.querySelector('.nav-item[data-id="benvenuti"]').classList.add("--current");
-            };
-        });
-    };
-    const observer = new IntersectionObserver(handleIntersection, options);
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-};
-
-
 const revealOnLoad = () => {
-    const reveals = document.querySelectorAll(".text-container, .image-container, .drawing-container");
+    const reveals = document.querySelectorAll(".text-container, .drawing-container, .header");
     reveals.forEach(element => {
         element.classList.add("--appear");
     });
 };
 
 const revealOnScroll = () => {
-    const reveals = document.querySelectorAll(".text-container, .image-container, .drawing-container");
+    const reveals = document.querySelectorAll(".text-container, .drawing-container, .header");
     for (let i = 0; i < reveals.length; i++) {
         const element = reveals[i];
         const windowHeight = window.innerHeight;
@@ -94,8 +28,19 @@ const revealOnScroll = () => {
     };
 };
 
+const getRandomUrl = () => {
+    const buttonUrl = document.querySelector(".random-button");
+    const items = [];
+    const item = items[Math.floor(Math.random()*items.length)];
+}
+
 window.addEventListener("load", () => {
     documentHeight();
+    revealOnLoad();
+});
+
+window.addEventListener("scroll", () => {
+    revealOnScroll();
 });
 
 window.addEventListener("resize", () => {
