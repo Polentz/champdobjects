@@ -51,29 +51,29 @@ const getRandomUrl = () => {
     };
     if (getLang === "en") {
         const urlsArray = [
-            "", 
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "https://forms.gle/yJJRQbDBUJc7vwz5A", 
+            "https://forms.gle/SKRwPtsncdHyTFoQ9",
+            "https://forms.gle/b5uZ7zbJUUxvWBBv5",
+            "https://forms.gle/DuPPkyj1tMd878w9A",
+            "https://forms.gle/rBfkwL4VVf4sVDK97",
+            "https://forms.gle/ezm5oXY2iHJYUBkr8",
+            "https://forms.gle/wGVow6zTsvaWoRsQ8",
+            "https://forms.gle/FZbK9JNWH4RMDWf2A",
+            "https://forms.gle/7wE5xuXiHmCf2ZkdA"
         ];
         applyHref(urlsArray);
     };
     if (getLang === "de") {
         const urlsArray = [
-            "", 
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "https://forms.gle/tPWZV3LkzEaCUij77", 
+            "https://forms.gle/eMcb2DE6TYVSsfoz5",
+            "https://forms.gle/R3gXpsLYptgFCxEb6",
+            "https://forms.gle/ZGomyUt4qzV3ep2a8",
+            "https://forms.gle/oM1hEAD643n37Anq7",
+            "https://forms.gle/3tzTPZD3mUHXoYeM6",
+            "https://forms.gle/UjWDUYqqFtguzJBVA",
+            "https://forms.gle/oH9QpEXpemfd1Wu38",
+            "https://forms.gle/eYSzgNc3BWgXsQGB8"
         ];
         applyHref(urlsArray);
     };
